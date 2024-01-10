@@ -8,7 +8,7 @@ let myFavGame =["PUBG ","ForTnie"];
 //console.log(myFavGame); // this doesnot give me joined array insted it will give me
 // [ 'PUBG ', 'ForTnie', [ 'predestination', 'Inception', 'Dune2' ] ]  
 
-// to avoid this we can use .concat() method or use spread operator
+// To avoid this we can use .concat() method or use spread operator
 
 let myFavThings =myFavMovies.concat(myFavGame); // this return concinated array
 // console.log(myFavThings);
