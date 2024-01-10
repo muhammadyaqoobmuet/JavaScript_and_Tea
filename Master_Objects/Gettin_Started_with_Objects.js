@@ -39,7 +39,7 @@
   JsUser.email="22sw013@students.muet.edu.pk";
   //Object.freeze(JsUser); // this wont allow anyone to change properties
   //JsUser.email="22sw0133@students.muet.edu.pk";
- // console.log(JsUser.email); // still we get 22sw013@students.muet.edu.pk
+ // console.log(JsUser.email); // still we get 22sw013@students.muet.edu.pk xD
 
 
 
