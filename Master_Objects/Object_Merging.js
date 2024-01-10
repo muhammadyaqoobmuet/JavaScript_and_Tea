@@ -13,4 +13,5 @@ const obj3 = {obj1,obj2}; // this will give nested objected which is not we want
 // console.log(obj3);
 
 obj3 = {...obj1,...obj2};
+
 console.log(obj3);  // output: merged objects
