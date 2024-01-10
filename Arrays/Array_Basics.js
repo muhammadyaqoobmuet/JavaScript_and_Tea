@@ -7,7 +7,7 @@ const arr = [1,23,4,5,23,123,123]; // this is first way to create array Note: we
 const newWayToCreateArr = new Array(1,2,3,4,5); // this is also the way to create an Array 
 
 
-// tHERE ARE SOME METHODS TO GO THROUGH TO MASTER THE ARRAYS
+// THERE ARE SOME METHODS TO GO THROUGH TO MASTER THE ARRAYS
 
  /*
 1.push(element1, ..., elementN):
