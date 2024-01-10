@@ -45,21 +45,20 @@ Changes the contents of an array by removing or replacing existing elements and/
 
  */
 
- // console.log(arr.push(999));   // returns new lenght of arr after adding to it
- // console.log(arr);            // [1,23,4,5,23,123,123,999] => length is 8
- // console.log(arr.pop());     //  999 return that deleted element
- // console.log(arr);          //   [1,23,4,5,23,123,123] 
- // console.log(arr.shift()); //   returns 1 which is deleted
- // console.log(arr);         //    [23,4,5,23,123,123] 
+  console.log(arr.push(999));   // returns new lenght of arr after adding to it
+ console.log(arr);            // [1,23,4,5,23,123,123,999] => length is 8
+ console.log(arr.pop());     //  999 return that deleted element
+  console.log(arr);          //   [1,23,4,5,23,123,123] 
+  console.log(arr.shift()); //   returns 1 which is deleted
+  console.log(arr);         //    [23,4,5,23,123,123] 
 
  // console.log(arr.unshift(1,23,"this is unshift method")); // 9
- // console.log(arr); //[ 1, 23, 'this is unshift method', 23, 4, 5, 23, 123, 123 ]
- // console.log(arr.indexOf(231));
+  console.log(arr); //[ 1, 23, 'this is unshift method', 23, 4, 5, 23, 123, 123 ]
+  console.log(arr.indexOf(231));
   let slicedArray = arr.slice(0,4);
   // slicedArray.pop(); //this wont affect arr
-  
-   // console.log(slicedArray); //[ 1, 23, 4 ]
-   // console.log(arr); //   [1,23,4, 5,23, 123, 123]  // original
+    console.log(slicedArray); //[ 1, 23, 4 ]
+    console.log(arr); //   [1,23,4, 5,23, 123, 123]  // original
 
     let splicedArray = arr.splice(0,3,1,2,3) // this 1222 will be aded to first index[0] where this extract
 
