@@ -31,9 +31,6 @@ const holdingArrorFucntion = (value)=>{
 console.log(holdingArrorFucntion(3)); //9
 
 
-
-
-
 // USAGE OF IFEE WITH FUNCTION
 
 // function contectIt(){
