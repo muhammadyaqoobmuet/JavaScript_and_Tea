@@ -19,3 +19,35 @@ demoUser.activateUser();
 
 console.log(this);  // in enviroment this referes to empty object 
 // but in broswer this refers to the global object Window because old time js was used to run on browser engine
+
+//  creating ARROW FUNCTION
+
+// const holdingArrorFucntion = (value)=>value*value;  this is implicit return this can be written as
+// const holdingArrorFucntion = (value)=>(value*value);  this is also one way mostly used in react 
+const holdingArrorFucntion = (value)=>{
+    return value**2;
+}
+
+console.log(holdingArrorFucntion(3)); //9
+
+
+
+
+
+// USAGE OF IFEE WITH FUNCTION
+
+// function contectIt(){
+//     console.log("conecting dataBase...");
+//     setTimeout(() => {
+//         console.log("dataBase Conected");
+//     }, 2000);
+// }
+// contectIt() to make above function IIFE use make the (function)(); eg
+
+(function contectIt(){
+    console.log("conecting dataBase...");
+    setTimeout(() => {
+        console.log("dataBase Conected");
+    }, 2000);
+})(); 
+// WHEN WE WILL USE THE CODE IT WILL AUTOMATICALLY INVOKED
