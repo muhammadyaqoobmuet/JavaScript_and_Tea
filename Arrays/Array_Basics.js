@@ -64,3 +64,10 @@ Changes the contents of an array by removing or replacing existing elements and/
 
     console.log(splicedArray); //[1,23] this will extract that part from array
    console.log(arr);   // remaining array [ 4, 5, 23, 123, 123 ]
+
+   // revising again some topics v1
+
+//    let arr1 = [1,2,3,4,5,6,7];
+//    let a1 = arr1.slice(0,arr1.length);
+//    console.log(`this is orginal array on which splice is applied ${arr1}`);
+//    console.log(`this is spliced array ${a1}`);
