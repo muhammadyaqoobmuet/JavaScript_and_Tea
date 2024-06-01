@@ -18,6 +18,11 @@ let guestList = `Guests:
 single[0]='h'
 // console.log(single[0]); // output s  // this is first index and lastindex = length-1;
 
+let str = `Hello`;
+
+alert( str[-2] ); // undefined
+alert( str.at(-2) ); // l
+
 // another method to create string
 
 let email = new String("yaqoobahmed45700@gmail.com")
