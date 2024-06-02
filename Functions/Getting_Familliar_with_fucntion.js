@@ -51,12 +51,20 @@ function getPriceOfCart(...priceofEachCart){
 // ************* Passing Object TO the Function ***********
 
 const userId= {
-    username : "yaqoob",
-    payment:7000, // pretty low i know hehehe
+    username: "yaqoob",
+    payment: 7000, // pretty low i know hehehe
+};
+
+function handlingObject(anyObject) {
+    console.log(`The username is ${isPropertyDefined(anyObject, 'username')} and payment is ${anyObject.payment}`);
 }
 
-function handlingObject(anyObject){
-    console.log(`the username is ${anyObject.username} and payment is ${anyObject.payment}` );
+function isPropertyDefined(anyObject, propertyName) {
+    if (anyObject[propertyName] != null || anyObject[propertyName] != undefined) {
+        return anyObject[propertyName];
+    } else {
+        return undefined;
+    }
 }
 
 handlingObject(userId);
