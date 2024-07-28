@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Automation Puase By Yaqoob",
+    "version": "1.0",
+    "description": "Pauses YouTube video when you switch to another window and resumes when you return.",
+    "permissions": [
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "*://*.youtube.com/*"
+    ]
+  }
+  
