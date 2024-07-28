@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-[url('https://www.brit.co/media-library/easy-lunch-meal-prep-recipes.png?id=32621924&width=980')] bg-cover">
+    <section class="w-[70vw] mx-auto bg-[#FEA32E] min-h-screen z-2">
+
+        <div class="pt-20 bg-[#FEA32E]">
+            <h1 class="text-4xl font-bold text-center">Our Menu</h1>
+            <div class="w-[30px] h-[2px] bg-black mx-auto my-1"></div>
+            <div class="flex justify-center gap-4 mt-4 py-2">
+                <button id="all" class="filter-btn px-4 py-2 border border-black rounded-lg hover:bg-red-400">All</button>
+                <button id="breakfast" class="filter-btn px-4 py-2 border border-black rounded-lg hover:bg-red-400">Breakfast</button>
+                <button id="lunch" class="filter-btn px-4 py-2 border border-black rounded-lg hover:bg-red-400">Lunch</button>
+            </div>
+        </div>
+
+        <div id="menu-items" class="grid grid-cols-2 w-full px-10 py-8 gap-4 place-items-center">
+            <!-- Menu Items -->
+            <div class="flex border py-6 px-2 justify-between bg-white rounded-lg shadow-md all breakfast">
+                <div>
+                    <img width="200" src="https://static.vecteezy.com/system/resources/previews/025/064/792/non_2x/fast-food-meal-with-ai-generated-free-png.png" alt="Zinger Burger" class="max-w-full h-auto">
+                </div>
+                <div class="flex flex-col w-1/2 pl-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-semibold">Zinger Burger</h2>
+                        <h5 class="text-lg">$29.90</h5>
+                    </div>
+                    <div class="w-full h-[1px] bg-slate-300 mx-auto my-1"></div>
+                    <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vero.</p>
+                </div>
+            </div>
+
+            <div class="flex border py-6 px-2 justify-between bg-white rounded-lg shadow-md all lunch">
+                <div>
+                    <img width="200" src="https://www.allrecipes.com/thmb/9bjdeeY3e7OWke-gx33cYM2S8Ls=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-Pizza-Lava-Toast-4x3-0de18c7a898346dfab1ede9f00471aed.jpg" alt="Lunch" class="max-w-full h-auto">
+                </div>
+                <div class="flex flex-col w-1/2 pl-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-semibold">Lunch</h2>
+                        <h5 class="text-lg">$29.90</h5>
+                    </div>
+                    <div class="w-full h-[1px] bg-slate-300 mx-auto my-1"></div>
+                    <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vero.</p>
+                </div>
+            </div>
+
+            <div class="flex border py-6 px-2 justify-between bg-white rounded-lg shadow-md all breakfast">
+                <div>
+                    <img width="200" src="https://www.health.com/thmb/ZZFTHzCpakRY0_-q6T2Tw1zGmFE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HighProteinBreakfast-469258e327f442418d1c2deca8fdbd66.jpg" alt="Breakfast" class="max-w-full h-auto">
+                </div>
+                <div class="flex flex-col w-1/2 pl-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-semibold">Breakfast</h2>
+                        <h5 class="text-lg">$29.90</h5>
+                    </div>
+                    <div class="w-full h-[1px] bg-slate-300 mx-auto my-1"></div>
+                    <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

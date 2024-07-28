@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <style>
+   
+    </style>
+    <header class="w-full relative">
+        <nav class="w-full flex gap-2 items-center px-6 py-2 justify-between sm:px-16 sm:py-4 bg-[#d1d1d1]">
+            <div class="text-4xl">
+                <h1 class="font-semibold">Mr<span class="text-orange-500 font-bold">Rehan</span></h1>
+            </div>
+
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-10 text-2xl font-bold">
+                    <li><a href="#">Buy</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Customer</a></li>
+                    <button class="bg-white font-semibold text-slate-950 px-4 py-[8px] rounded-md">SignUp</button>
+                </ul>
+            </div>
+
+            <div id="clickme" class="lg:hidden flex flex-col items-center gap-2">
+                <div class="w-[20px] h-[3px] bg-black"></div>
+                <div class="w-[20px] h-[3px] bg-black"></div>
+                <div class="w-[20px] h-[3px] bg-black"></div>
+            </div>
+        </nav>
+
+        <aside id="side" class="hidden absolute w-[100vw] sm:w-[40vw] h-[100vh] left-0 top-0 bg-[#414141] flex flex-col  lg:hidden  z-50">
+            <div class="text-4xl text-white mt-4 px-16 flex items-center  justify-between sm:gap-2">
+                <h1 class=" inline font-semibold">Mr<span class="text-orange-500 font-bold">Rehan</span></h1>
+               <div id="internal"  class="text-6xl mt-2 flex  items-center">
+                <i class='bx bx-x '></i>
+               </div>
+            </div>
+           
+            <ul class="flex flex-col items px-16 gap-5 mt-4 text-2xl font-bold">
+                <li class="text-white"><a href="#">Buy</a></li>
+                <li class="text-white"><a href="#">Review</a></li>
+                <li class="text-white"><a href="#">Customer</a></li>
+                <button class="self-start  bg-white font-semibold text-slate-950 px-4 py-[8px] rounded-md">SignUp</button>
+            </ul>
+        </aside>
+    </header>
+    <script src="app.js"></script>
+</body>
+</html>

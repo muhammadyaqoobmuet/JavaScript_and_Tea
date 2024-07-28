@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        .links-container {
+            transition: max-height 0.2s ease, opacity 0.1s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .links-container.visible {
+            max-height: 500px; /* Adjust based on your content height */
+            opacity: 1;
+        }
+
+        .fixedNavBar{
+            transition:all 0.4s ease;
+            position: fixed;
+            top: 0;
+            color: black;
+            background-color: white !important;
+        }
+        .opacity-0 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.opacity-1 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.hide {
+    max-height: 0;
+    opacity: 0;
+}
+html,body{
+    scroll-behavior: smooth !important;
+}
+        
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <div class="wrapper">
+        <nav class="w-full sm:flex sm:justify-between  sm:bg-[transparent] sm:items-center sm:px-2 sm:py-2">
+            <div class="nav-center flex items-center justify-between py-2 px-6">
+                <div>
+                    <h1 class="text-4xl">LOGO</h1>
+                </div>
+                <div class="sm:hidden toggle">
+                    <i class='text-3xl bx bx-menu-alt-right'></i>
+                </div>
+            </div>
+            
+            <div class="links-container sm:flex sm:max-h-full sm:opacity-100">
+                <ul class="links w-full  bg-transparent  flex flex-col gap-4 py-2 px-6 sm:flex-row
+                 sm:justify-end">
+                    <li class="text-xl   font-bold"><a class="scroll-link" href="#home">Home</a></li>
+                    <li class="text-xl   font-bold">Contact</li>
+                    <li class="text-xl   font-bold"><a class="scroll-link" href="#about">About</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home"  class="bg-gray-900 h-[90vh]  text-white py-16">
+            <div class="container mx-auto px-6 md:px-12 text-center">
+                <h2  class="text-4xl font-bold mb-6"> HOME </h2>
+                <p class="text-lg mb-8">
+                    We are a team of passionate professionals dedicated to delivering top-notch services and solutions to our clients. Our mission is to provide innovative and effective strategies to help businesses thrive in the modern digital landscape. With years of experience and a commitment to excellence, we are your trusted partner in success.
+                </p>
+                <p class="text-lg mb-8">
+                    Our team consists of experts from various fields, ensuring a comprehensive approach to every project we undertake. We believe in the power of collaboration and strive to build long-lasting relationships with our clients based on trust and mutual respect.
+                </p>
+                <p class="text-lg">
+                    Join us on this exciting journey and let's achieve greatness together!
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="bg-[darkblue] h-[90vh]  text-white  ">
+            <div class="container mx-auto px-6 md:px-12 text-center">
+                <h2 class="text-4xl font-bold mb-6"> About </h2>
+                <p class="text-lg mb-8">
+                    We are a team of passionate professionals dedicated to delivering top-notch services and solutions to our clients. Our mission is to provide innovative and effective strategies to help businesses thrive in the modern digital landscape. With years of experience and a commitment to excellence, we are your trusted partner in success.
+                </p>
+                <p class="text-lg mb-8">
+                    Our team consists of experts from various fields, ensuring a comprehensive approach to every project we undertake. We believe in the power of collaboration and strive to build long-lasting relationships with our clients based on trust and mutual respect.
+                </p>
+                <p class="text-lg">
+                    Join us on this exciting journey and let's achieve greatness together!
+                </p>
+            </div>
+        </section>
+        <div id="arrow" class="opacity-0 fixed bottom-8 right-8 cursor-pointer">
+            <a class="w-[50px]" href="#home"><i class='text-white text-4xl animate-bounce bx bxs-hand-up'></i></a>
+        </div>
+        
+    </div>
+
+    <script>
+        document.querySelector('.toggle').addEventListener('click', () => {
+    document.querySelector('.links-container').classList.toggle('visible');
+});
+
+window.addEventListener('scroll', () => {
+    const navBar = document.querySelector('nav');
+    const scrollheight = window.pageYOffset;
+    const navBarHeight = navBar.getBoundingClientRect().height;
+
+
+    if (scrollheight > navBarHeight) {
+        navBar.classList.add('fixedNavBar');
+    } else {
+        navBar.classList.remove('fixedNavBar');
+    }
+
+    const arrow = document.getElementById('arrow');
+
+    if (scrollheight > 100) {
+        arrow.classList.remove('opacity-0');
+        arrow.classList.add('opacity-1');
+    } else {
+        arrow.classList.remove('opacity-1');
+        arrow.classList.add('opacity-0');
+    }
+});
+
+// Smooth scroll and close nav
+const scrollLinks = document.querySelectorAll('.scroll-link');
+
+scrollLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = e.currentTarget.getAttribute("href").slice(1);
+        const navHeight = document.querySelector('nav').getBoundingClientRect().height;
+        const containerHeight = document.querySelector('.links-container').getBoundingClientRect().height;
+        const fixedNav = document.querySelector('nav').classList.contains("fixedNavBar");
+        const element = document.getElementById(id);
+        let position = element.offsetTop - navHeight;
+
+        if (!fixedNav) {
+      position = position - navHeight;
+    }
+    if (navHeight > 82) {
+      position = position + containerHeight;
+    }
+
+        window.scrollTo({
+            left: 0,
+            top: position
+        });
+
+        const linksContainer = document.querySelector('.links-container');
+        linksContainer.classList.remove('visible');
+        linksContainer.classList.add('hide');
+    });
+});
+
+    </script>
+</body>
+</html>

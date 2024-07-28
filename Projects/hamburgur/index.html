@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        * {
+            color: black;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="w-full h-16 bg-transparent shadow-lg py-2 px-4 flex justify-between items-center relative md:px-10">
+        
+        <div class="logo-div">
+            <h1 class="text-3xl text-white font-bold tracking-wide">SPANK</h1>
+        </div>
+
+        <div id="tobeclicked" class="nav-toggle flex flex-col gap-2 sm:hidden cursor-pointer">
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+            <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+        
+        <div id="clickme" class="links-container hidden sm:block absolute  top-16 left-0 w-full bg-gray-800 transition 0.2s
+         sm:static sm:w-auto sm:bg-transparent sm:h-auto sm:flex sm:items-center">
+            <ul class="links flex flex-col items-center gap-5 pt-4 sm:flex-row sm:pt-0 sm:gap-8">
+                <li class="hover:bg-gray-700 rounded-full px-6 py-2 my-2 transition sm:px-4 sm:py-1 bg-white">
+                    <a href="#home" class="text-lg font-semibold">Home</a>
+                </li>
+                <li class="hover:bg-gray-700 rounded-full px-6 my-2 py-2 transition sm:px-4 sm:py-1 bg-white">
+                    <a href="apply" class="text-lg font-semibold">Apply</a>
+                </li>
+                <li class="hover:bg-gray-700 bg-white px-6 py-2 my-2 transition sm:px-4 sm:py-1  rounded-full">
+                    <a href="review" class="text-lg font-semibold">Review</a>
+                </li>
+                <li class="hover:bg-gray-700 bg-white px-6 py-2 my-2 transition sm:px-4 sm:py-1  rounded-full">
+                    <a href="contact" class="text-lg font-semibold">contact</a>
+                </li>
+            </ul>           
+        </div>
+
+    </nav>
+    <section id="home" class="w-full h-[90vh] grid place-items-center">
+        <h1 class="text-white text-5xl font-bold">
+            LETS GET THIS TOGETHER
+        </h1>
+        <p class="text-white">scroll me down </p>
+
+    </section>
+
+    <section id="apply" class="w-full h-[90vh] bg-gray-700 grid place-items-center">
+        <h1 class="text-white text-5xl font-bold">
+           APPLY
+        </h1>
+        <p class="text-white">scroll me down </p>
+
+    </section>
+
+    <section id="review" class="w-full h-[90vh] bg-gray-600 grid place-items-center">
+        <h1 class="text-white text-5xl font-bold">
+          REVIEW
+        </h1>
+        <p class="text-white">scroll me down </p>
+
+    </section>
+
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

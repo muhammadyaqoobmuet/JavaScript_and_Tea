@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0">
+    <style>
+        .hover-mix-blend-normal:hover {
+    mix-blend-mode: normal;
+  }
+    </style>
+    <header class="w-full bg-[#414141]">
+        <nav class="w-full flex items-center justify-between py-4 px-32">
+            <div class="text-3xl font-semibold text-white">Color<span class="text-orange-700 font-bold">Filiper</span></div>
+            <div class="w-1/4">
+                <ul class="flex justify-evenly text-xl font-semibold text-white">
+                    <li id="sim" class="cursor-pointer" >Simple</li>
+                    <li id="hex" style="color:lightskyblue" class="cursor-pointer">Hex</li>
+                    <li id="about" class="cursor-pointer">About Us</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="changethisColor"  class="  w-full flex flex-col items-center justify-center min-h-[calc(100vh-68px)]">
+        <div class="flex flex-col items-center">
+            <div class="bg-[#414141] rounded-md px-6 py-4 mb-4">
+                <p class="text-3xl text-white font-semibold">Background Color: <span id="colorChange"></span></p>
+            </div>
+            <button id="btn" class="mt-4 bg-orange-700 text-white px-4 py-2 rounded hover:bg-transparent hover:text-black border-[1px] border-white rounded-lg ">Click Me</button>
+        </div>
+    </div>
+    <div id="about-secotion"  class="  w-full flex flex-col items-center justify-center min-h-[calc(100vh-68px)]">
+        <div class="flex flex-col items-center">
+            <div class="bg-[#414141] rounded-md px-6 py-4 mb-4">
+                <div class="text-3xl font-semibold text-white">About<span class="text-orange-700 font-bold">  Fliper</span></div>
+            </div>
+            <div id="targetDiv" class="bg-[#f0f0f0] rounded-md px-6 py-4 mb-4">
+                <p class="text-lg text-gray-800 font-bold">Welcome to Color Flipper</p>
+                <p class="text-md text-gray-700 mt-2">At Color Flipper, we bring a splash of color to your digital world! Our mission is to provide you with an endless array of vibrant and unique colors at the click of a button. Whether you need a random hex color for your latest web project or a simple color for design inspiration, we've got you covered.</p>
+                <p class="text-md text-gray-700 mt-2">Color Flipper is designed to be a fun and easy-to-use tool for developers, designers, and anyone who loves playing with colors. With just one click, you can discover new colors that will brighten up your work and spark your creativity.</p>
+                <p class="text-md text-gray-700 mt-2">Dive into the world of colors with Color Flipper, and let your imagination run wild!</p>
+            </div>
+           
+        </div>
+    </div>
+    
+ 
+</body>
+<script src="main.js"></script>
+</html>

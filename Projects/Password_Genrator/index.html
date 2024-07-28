@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body >
+    
+    <!-- conatiner -->
+     <div id="container">
+        <div id="box">
+            <h1>Password Genrator</h1>
+            <div style="display: flex; width: 100%; padding-left: 40px; max-width: 80%;  justify-content: center; ">
+                <input type="text" readonly style="color: black;"
+                  name="" id="inputFeild" data-passwdArea >
+                <button style="position: relative;"  data-copyBtn > <span style="" data-copyMsg></span> <span data-actualMsg>Copy</span> </button>
+            </div>
+            <div id="line"></div>
+            <div id="downSection">
+
+                <div id="lengthSection">
+                    <p>Password Length</p>
+                    <p data-passwdlen>0</p>
+                </div>
+                <div id="scrollerdiv">
+
+                    <input id="scroller" type="range" min="1" max="20">
+                </div>
+                <div id="ucase">
+                    <input type="checkbox" name="" id="ucasebox">
+                    <label for="ucasebox">UpperCase</label>
+                </div>
+                <div id="lcase">
+                    <input type="checkbox" name="" id="lcasebox">
+                    <label for="lcasebox">LowerCase</label>
+                </div>
+                <div id="numbers">
+                    <input type="checkbox" name="" id="numberbox">
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div id="chars">
+                    <input type="checkbox" name="" id="charsbox">
+                    <label for="charsbox">Characters</label>
+                </div>
+               
+            </div>
+            <div id="strengthBox">
+                <p>Strength</p>
+                <span style="width: 25px; height: 25px;  border-radius: 50%;" data-indicator></span>
+            </div>
+            <div id="btndiv">
+
+                <button id="genpass">Genrate Passowrd</button>
+            </div>
+            
+        </div>
+     </div>
+     <script src="app.js"></script>
+</body>
+</html>

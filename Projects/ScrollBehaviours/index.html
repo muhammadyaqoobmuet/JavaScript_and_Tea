@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body class="">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        *{
+            font-family: 'Poppins',serif;
+        }
+        #Hiring,#about,#apply{
+       .links-container {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(0, 100%);            font-family: 'Ubuntu',serif
+        }
+     
+ 
+}
+
+.links-container.open {
+    transform: translate(0, 0);
+}
+
+        </style>
+
+            <section class="w-full bg-[#F8CF33]">
+                <main class="w-[90vw] mx-auto h-auto bg-[#F8CF33] px-4">
+
+                    <!-- nav -->
+                <!-- nav -->
+ <!-- Navigation -->
+    <nav class="w-full h-16 flex items-center justify-between px-4 bg-white shadow-lg">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-800">HireWell</h1>
+        </div>
+        <div class="block sm:hidden">
+            <button id="toggleButton" class="text-xl focus:outline-none">
+                OPEN SIDE
+            </button>
+        </div>
+        <div class="hidden sm:flex items-center space-x-8">
+            <a href="#Hiring" class="text-gray-800 hover:text-red-500 transition duration-300">Hiring</a>
+            <a href="#apply" class="text-gray-800 hover:text-red-500 transition duration-300">Apply</a>
+            <a href="#about" class="text-gray-800 hover:text-red-500 transition duration-300">About</a>
+        </div>
+    </nav>
+
+    <!-- Links Container (for mobile) -->
+    <div id="linksContainer" class="fixed inset-x-0 bottom-0 bg-gray-200 p-4 sm:hidden hidden">
+        <ul class="flex items-center justify-evenly text-xl font-semibold">
+            <li><a href="#Hiring" class="text-gray-800 hover:text-red-500 transition duration-300">Hiring</a></li>
+            <li><a href="#apply" class="text-gray-800 hover:text-red-500 transition duration-300">Apply</a></li>
+            <li><a href="#about" class="text-gray-800 hover:text-red-500 transition duration-300">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Sections -->
+    <main class="w-full bg-[#F8CF33]">
+        <!-- Landing Section -->
+        <section class="w-full h-[88vh] flex flex-col-reverse md:flex-row px-4 py-8 md:py-16">
+            <div class="md:w-1/2 flex flex-col justify-center items-center md:items-start">
+                <h1 class="text-4xl md:text-7xl font-bold text-white mb-4 text-center md:text-left">HireWell</h1>
+                <h4 class="text-2xl md:text-4xl font-light text-white mb-2 text-center md:text-left">For You and Your Team</h4>
+                <p class="text-lg md:text-xl text-white text-center md:text-left max-w-lg mb-6">Find people around you that match your requirements. We find you the best and most accurate people that fit your needs. Join now for a 12-month free trial with $0 upfront.</p>
+                <button class="bg-[#E53B26] hover:bg-[#EC574A] px-6 py-2 rounded-md font-semibold text-white transition duration-300">Join Now</button>
+            </div>
+            <div class="md:w-1/2">
+                <img src="./img/Layer-3.png" class="w-full md:rounded-md object-cover" alt="Illustration">
+            </div>
+        </section>
+
+        <!-- Hiring Process Section -->
+        <section id="Hiring" class="w-full bg-white py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-8 text-center">Hiring Process</h1>
+                <div class="w-20 h-2 bg-red-500 mx-auto mb-12"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Welcome to Our Hiring Portal</h2>
+                        <p class="text-lg">Explore exciting career opportunities with us. Join a team of professionals dedicated to excellence and innovation.</p>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Current Openings</h2>
+                        <p class="text-lg">We are currently hiring for various positions across multiple departments. Check out our latest job postings and apply today!</p>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Why Work With Us</h2>
+                        <p class="text-lg">Join our team and enjoy a supportive work environment, competitive benefits, and opportunities for professional growth.</p>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Our Culture</h2>
+                        <p class="text-lg">We believe in fostering a culture of collaboration, innovation, and respect. Our team members are our greatest asset.</p>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Employee Testimonials</h2>
+                        <p class="text-lg">Hear from our employees about their experiences working with us and what makes our company a great place to work.</p>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+                        <p class="text-lg">If you have any questions or need assistance with your application, feel free to reach out to our HR team. We are here to help!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Now Section -->
+        <section id="apply" class="w-full bg-white py-16 px-4 flex items-center">
+            <div class="md:w-1/2">
+                <img src="https://www.wikihow.com/images/2/22/Apply-for-a-Job-Step-24.jpg" class="w-full rounded-md object-cover" alt="Apply Now">
+            </div>
+            <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-4">Apply Now</h1>
+                <h4 class="text-2xl md:text-4xl font-light text-gray-800 mb-4">For You and Your Team</h4>
+                <p class="text-lg md:text-xl text-gray-800 mb-6 max-w-lg">Find people around you that match your requirements. We find you the best and most accurate people that fit your needs. Join now for a 12-month free trial with $0 upfront.</p>
+                <button class="bg-[#E53B26] hover:bg-[#EC574A] px-6 py-2 rounded-md font-semibold text-white transition duration-300">Apply Now</button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="w-full bg-[#0E1016] py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8 text-center">About Us</h1>
+                <div class="w-20 h-2 bg-red-500 mx-auto mb-12"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="./img/avatar.png" class="w-32 h-32 rounded-full object-cover mb-4" alt="Founder">
+                        <h3 class="text-xl font-semibold text-white mb-2">John Doe</h3>
+                        <p class="text-gray-300 text-center">Founder & CEO</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="./img/avatar.png" class="w-32 h-32 rounded-full object-cover mb-4" alt="Co-founder">
+                        <h3 class="text-xl font-semibold text-white mb-2">Jane Smith</h3>
+                        <p class="text-gray-300 text-center">Co-founder & CTO</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="./img/avatar.png" class="w-32 h-32 rounded-full object-cover mb-4" alt="HR Manager">
+                        <h3 class="text-xl font-semibold text-white mb-2">David Johnson</h3>
+                        <p class="text-gray-300 text-center">HR Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="w-full bg-white py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-8 text-center">Contact Us</h1>
+                <div class="w-20 h-2 bg-red-500 mx-auto mb-12"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">General Inquiries</h2>
+                        <p class="text-lg">For general questions and inquiries, please contact us via email or phone.</p>
+                        <ul class="mt-4">
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM4 10a6 6 0 1112 0 6 6 0 01-12 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Email: info@hirewell.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2 mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM4 10a6 6 0 1112 0 6 6 0 01-12 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Phone: +1-234-567-8901</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Customer Support</h2>
+                        <p class="text-lg">For customer support related inquiries, please contact our support team.</p>
+                        <ul class="mt-4">
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM4 10a6 6 0 1112 0 6 6 0 01-12 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Email: support@hirewell.com</span>
+                            </li>
+                            <li class="flex items-center space-x-2 mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM4 10a6 6 0 1112 0 6 6 0 01-12 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Phone: +1-234-567-8902</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-300 rounded-md p-6 text-gray-800">
+                        <h2 class="text-2xl font-semibold mb-4">Follow Us</h2>
+                        <p class="text-lg">Stay connected with us on social media for news, updates, and more.</p>
+                        <ul class="mt-4">
+                            <li class="flex items-center space-x-4">
+                                <a href="#" class="text-gray-800 hover:text-red-500 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM7.445 15h2.11v-5.253h-2.11V15zm0-6.764h2.11V7.5h-2.11v.736zm5.657 6.764h2.11v-2.838c0-.465.398-.844.888-.844h1.346a.867.867 0 01.876.843l.021 3.008a.867.867 0 01-.876.844h-1.387v2.76h1.386a.867.867 0 01.876.844l.021 3.008a.867.867 0 01-.876.844H13.1a6.795 6.795 0 01-2.998-.702 4.09 4.09 0 01-1.646-1.843 5.482 5.482 0 01-.534-2.624v-3.435H8.233v-2.76h1.444V5.59c0-1.073.22-1.854.652-2.42A3.675 3.675 0 0111.905 2c.96 0 1.763.314 2.378.993.632.67.953 1.543.953 2.712v2.803z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-800 hover:text-red-500 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 1a9 9 0 110 18 9 9 0 010-18zM12.523 7.702h-1.946V5.755c0-.425.343-.768.768-.768h1.178c.424 0 .768.343.768.768v1.947h-1.768zm-2.59 4.837c.734 0 1.328-.593 1.328-1.327 0-.734-.594-1.327-1.328-1.327-.734 0-1.327.593-1.327 1.327 0 .734.593 1.327 1.327 1.327zm5.181-2.62c0-.46-.372-.832-.832-.832a.83.83 0 00-.83.832c0 .459.372.831.83.831a.83.83 0 00.832-.83zm-1.128-.084c-.412 0-.746.335-.746.747 0 .412.334.746.746.746.412 0 .747-.334.747-.746 0-.412-.335-.747-.747-.747zM8.333 7.616a.83.83 0 00.83-.832.83.83 0 00-.83-.83c-.459 0-.831.371-.831.83a.83.83 0 00.831.832zm1.312 6.111c-1.488 0-2.67-.234-3.6-.702a6.044 6.044 0 01-2.402-1.875c-.55-1.01-.83-2.147-.83-3.425 0-1.28.28-2.437.83-3.446a6.01 6.01 0 012.402-1.876c.93-.468 2.112-.703 3.6-.703s2.67.235 3.599.703a6.044 6.044 0 012.403 1.876c.55 1.009.83 2.167.83 3.446 0 1.278-.28 2.415-.83 3.426a6.01 6.01 0 01-2.402 1.875c-.929.468-2.11.702-3.599.702zm4.306-7.657a.833.833 0 100-1.666.833.833 0 000 1.666z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-800 hover:text-red-500 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 1a9 9 0 110 18 9 9 0 010-18zM13.524 7.702h-1.947V5.755c0-.425.343-.768.768-.768h1.178c.425 0 .769.343.769.768v1.947h-1.768zm-.532 2.74c.733 0 1.327-.594 1.327-1.328 0-.733-.594-1.327-1.327-1.327-.734 0-1.328.594-1.328 1.327 0 .734.594 1.328 1.328 1.328zm3.488-2.663a.83.83 0 00-.83-.831.83.83 0 00-.831.831c0 .459.372.831.83.831a.83.83 0 00.83-.83zm-1.117-.084c-.412 0-.746.335-.746.747 0 .412.334.746.746.746.412 0 .747-.334.747-.746 0-.412-.335-.747-.747-.747zM9.99 7.616a.83.83 0 00.831-.832.83.83 0 00-.831-.83c-.459 0-.83.371-.83.83a.83.83 0 00.83.832zm1.31 6.112c-1.487 0-2.669-.234-3.599-.702a6.02 6.02 0 01-2.402-1.875c-.55-1.01-.831-2.148-.831-3.426 0-1.279.281-2.417.831-3.426a6.021 6.021 0 012.402-1.876c.93-.468 2.112-.703 3.599-.703s2.669.235 3.599.703a6.014 6.014 0 012.402 1.876c.55 1.009.831 2.147.831 3.426 0 1.278-.281 2.416-.831 3.425a6.02 6.02 0 01-2.402 1.876c-.93.468-2.112.703-3.599.703zm4.306-7.657a.833.833 0 100-1.665.833.833 0 000 1.665z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+
+<footer class="bg-white dark:bg-gray-900 ">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" class="flex items-center">
+                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HireWell</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/" class="hover:underline">HiringWell</a>
+                      </li>
+                      <li>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                      </li>
+                      <li>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">Privacy Policy</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+          </div>
+      </div>
+    </div>
+</footer>
+
+         
+   
+   <script src="app.js"></script>
+</body>
+</html>

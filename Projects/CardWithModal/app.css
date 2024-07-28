@@ -1,0 +1,257 @@
+
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+    font-family:   'Arial Narrow Bold', sans-serif;
+}
+
+html,body{
+
+height:100%;
+width:100%;
+background:linear-gradient(to right,rgba(75, 197, 245, 0.661),rgba(46, 77, 171, 0.424),rgba(190, 51, 190, 0.268));
+}
+
+
+
+#container{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.839);
+    width: 100%;
+    height: 100%;
+}
+
+#glowred{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 0, 0, 0.479);
+    border-radius: 50%;
+    top: 50px;
+    left: 350px;
+    /* z-index: -10; */
+  box-shadow:  -10px -10px rgba(255, 0, 0, 0.209);
+  animation: motionX  10s ease-in  infinite alternate-reverse ;
+}
+#glowblue{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(81, 0, 255, 0.479);
+    border-radius: 50%;
+    bottom: 50px;
+    right: 350px;
+    /* z-index: -10; */
+  box-shadow:  -10px -10px rgba(0, 0, 255, 0.209);
+  animation: reversemotionX  10s ease-in  infinite alternate-reverse ;
+}
+
+#box{
+        max-width: 25%;
+        height: 80%;
+        background-color: rgba(94, 132, 225, 0.239);
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%,-50%);
+        border-radius: 20px;
+        border: 1px solid white;
+}
+#aboveSection{
+    width: 100%;
+    height: 45%;
+    background-color: rgba(255, 248, 238, 0.376);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#aboveSection h1{
+    margin-top: 4rem;
+ padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    color: white;
+    font-weight: 500;
+}
+
+#aboveSection h1::before{
+   content: "";
+   position: absolute;
+   background-color: rgba(51, 0, 255, 0.767);
+   z-index: -1;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%; 
+   border-radius: 40px;
+   height: 100%;
+   margin-top: 2px;
+}
+#picture{
+    border-radius: 50%;
+    width: 100%;
+    height: 100% ;
+    margin: 0 auto;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#picture img{
+    border-radius: 50%;
+    width: 40%;
+    height: 75%;
+}
+
+#belowsection{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+}
+#belowsection p{
+ color: white;
+}
+
+#btndiv{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    padding:  10px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(64, 9, 173);
+        color: white;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        
+}
+button:hover{
+    background-color: rgb(100, 46, 207);
+}
+
+#modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+} 
+#box2{
+    width: 60vw;
+    height: 40%;
+    border: 1px solid rgba(39, 15, 138, 0.52);
+    /* background-color: rgba(72, 25, 153, 0.426); */
+    background:linear-gradient(to right,rgba(75, 197, 245, 0.326),rgba(46, 77, 171, 0.424),rgba(190, 51, 190, 0.268));
+    border-radius: 20px;
+}
+
+#line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+#aboveOfmodal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+}
+#aboveOfmodal p{
+    cursor: pointer;
+}
+
+#share{
+    margin-top: 30px;
+    padding: 10px 8px;
+}
+
+#socials{
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#socials h4{
+    width: 40px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.active{
+    scale: 1;
+    z-index: 1000;
+    transition: all ease 0.5s;
+
+}
+.hidden{
+   scale: 0;
+    transition: all ease 0.5s;
+    z-index: -100;
+}
+
+.removedoverly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.935);
+    z-index: -2;
+    display: none;
+}
+
+.adding{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.927);
+    z-index: -2;
+}
+
+@keyframes motionX {
+   
+    to{
+        
+        left: 500px;
+        
+
+    }
+    from{
+        
+            left: 400px;
+        
+    }
+}
+
+
+@keyframes reversemotionX {
+    to{
+        right: 500px;
+    }
+    from{
+        right: 400px;
+    }
+}

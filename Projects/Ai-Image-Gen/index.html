@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Image</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow {
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            border-radius: 100%;
+        }
+
+        .glow-1 {
+            animation: glow1 4s linear infinite;
+        }
+
+        .glow-2 {
+            animation: glow2 4s linear infinite;
+            animation-delay: 100ms;
+        }
+
+        .glow-3 {
+            animation: glow3 4s linear infinite;
+            animation-delay: 200ms;
+        }
+
+        .glow-4 {
+            animation: glow4 4s linear infinite;
+            animation-delay: 300ms;
+        }
+
+        @keyframes glow1 {
+            0% {
+                transform: translate(10%, 10%) scale(1);
+            }
+            25% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+            50% {
+                transform: translate(-10%, -10%) scale(1);
+            }
+            75% {
+                transform: translate(10%, -10%) scale(1);
+            }
+            100% {
+                transform: translate(10%, 10%) scale(1);
+            }
+        }
+
+        @keyframes glow2 {
+            0% {
+                transform: translate(-10%, -10%) scale(1);
+            }
+            25% {
+                transform: translate(10%, -10%) scale(1);
+            }
+            50% {
+                transform: translate(10%, 10%) scale(1);
+            }
+            75% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+            100% {
+                transform: translate(-10%, -10%) scale(1);
+            }
+        }
+
+        @keyframes glow3 {
+            0% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+            25% {
+                transform: translate(-10%, -10%) scale(1);
+            }
+            50% {
+                transform: translate(10%, -10%) scale(1);
+            }
+            75% {
+                transform: translate(10%, 10%) scale(1);
+            }
+            100% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+        }
+
+        @keyframes glow4 {
+            0% {
+                transform: translate(10%, -10%) scale(1);
+            }
+            25% {
+                transform: translate(10%, 10%) scale(1);
+            }
+            50% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+            75% {
+                transform: translate(-10%, -10%) scale(1);
+            }
+            100% {
+                transform: translate(10%, -10%) scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center">
+    <div class="relative w-[100vw] h-[60vh] bg-[#414141] bg-cover z-1 bg-[url('https://www.shutterstock.com/image-vector/abstract-gradient-wave-particles-big-600nw-1930623710.jpg')]">
+        <div class="w-full flex flex-col items-center justify-center h-1/2">
+            <h1 class="text-6xl font-bold text-white my-4 mt-64">Generate Image You Like</h1>
+            <p class="text-center text-white text-xl px-8 mt-2">Convert Text into Images that you like with our new tool made with JS<br>
+                a Tool Powered by AI-with JS
+            </p>
+            <div class="relative p-12 w-full sm:max-w-2xl sm:mx-auto">
+                <div class="overflow-hidden z-0 rounded-full relative p-3">
+                    <form role="form" class="relative flex z-50 bg-white rounded-full">
+                        <input id="typo" type="text" placeholder="enter your search here" class="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none">
+                        <button id="btn" class="bg-indigo-500 text-white rounded-full font-semibold px-8 py-4 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none">Search</button>
+                    </form>
+                    <div class="glow glow-1 z-10 bg-pink-400 absolute"></div>
+                    <div class="glow glow-2 z-20 bg-purple-400 absolute"></div>
+                    <div class="glow glow-3 z-30 bg-yellow-400 absolute"></div>
+                    <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-4 image-grid w-full h-full px-4 gap-2 mt-2">
+        <!-- Images will be dynamically inserted here by JavaScript -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

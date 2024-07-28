@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs-Project</title>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA3tJREFUSEuN1VuIlWUUBuBn7RkHFTtDByrUDoRJkZE5W0fLDggZllFQ3WjQXVgEgUlEmDdFRIZBdFEUhFER1J3aYXJwJk8giUFl3XVR2kEyGHXce+W/9z8ze7NnRv+Lzf/vb33fWut93/W94VyfQE4e3Lo8/h6Kd43fSTe3Lza+OuInOyBEa7bxLO31hDTIlSm+Jocj3L04/T1eXGf8aL1tHbS3lmNNDXBFFwO4rtgYvNfFs1X+nQK1sfxjEHV0E+zOuKwmh3BNycBprCfWVuSdVWUnY/R0QlouFYSMV138+QM9xziY3NBstfG8iEeJ+SkPjoRFy9OJybjsJLksoAFL2BgZn5Hz6mF9JQ0k/Xi7ODCp1Zhb5/hyjk2ksRaSx8W0m6tqfCtcWxKxrxZWLss4OiTfz7CmlNKPETbU08bg3iXhSLvERmXamvpM5GDGXnJhU75N4CKsyHQh7qnQn9yX1PFTsLbC08GBXv5oO65V10PMSbYEW+tsHcU92FPj+YrobyRjJHm9jw2DXEosTLkZs7pZVuVwu0wpdD4bOzE72RTMw8PESMi+5BNiNvlL8mayAxd1haXSeThS58Fgfhd39HJ4dIYbHe3i++Dmsr16sDL5sCT08mROiM0h/0vWYXXyZPAGLigHfBuxI2VtSdhS8DdG8pC4vS7nBLeimgx3s26EP7uZW2NB8AxuahbRAPcR4dPioMYAlgqs8EGVtUXMmEx3pqu7i7bDSGRsC/lSNQwXJO+SLxcqwS3J9BZtP4aPWklN8VVFrlrMcBtExcceLqmFFTKG63Ia/qlQSR5CD7E35V+YUWDew4FTbA9uRHeybYTVd3Gig+TRbIPh4syGgl7LsEPGyZAF3p9jenkXHa3w+GmOdzWn/FCBUk84dFvGSAOwEq6WG6B9DnfxVvBUEZlyfzSwjldLmRZHvIJ5ER6Qfq7Tt5SjTdzHr5y2SR5PEfbLmSfZTvQVFWXYFBn3kwua3caalC8U0E2juojf23xi6g6aVexj5im+SRahkO4Tdd4Nuuv0npmVj7vp6+W3jsuuLcHEftfY0y9m9cjtWEwcTvlFhOci4/q6zL7w6wQWdzYOShzLe6RfzurhS/Qm7wgz+tKaszvnOXlys5jvOL/GQHCiSjVG/bUFiiYHUxjOZM7fuq/DVlsTTOA6k8p0Mn/uMJUp+Cti/wdOA2QtTKgMpwAAAABJRU5ErkJggg==" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .content.active {
+        background-color: white;
+        display: block;
+    }
+    .content {
+        display: none;
+    }
+    .tab-btn {
+        background-color: #D8E0E9; /* Default background color */
+    }
+    .tab-btn.active {
+        background-color: white; /* Active background color */
+    }
+</style>
+<body>
+    <div class="wrapper w-full min-h-screen bg-[#F1F7FC]">
+        <div class="upperHeadings pt-16">
+            <h1 class="text-center text-4xl font-bold text-gray-950">About us</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quo placeat numquam voluptas ea ratione!</p>
+        </div>
+        <div class="hero flex justify-center py-6 gap-2 ">
+            <div class="hero w-[70vw] h-[60vh]  grid grid-cols-2 gap-10 place-content-center items-baseline items-center rounded-md">
+                <!-- imgdiv -->
+                <div class="w-full object-contain mx-4 h-full rounded-md">
+                    <img class="w-full h-full rounded-md" src="https://images.pexels.com/photos/26843605/pexels-photo-26843605/free-photo-of-stuhle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="parent  w-full bg-white flex flex-col h-full">
+                    <div class="flex justify-between">
+                        <button class="px-5 tab-btn w-full font-semibold py-4 active" data-id="history">History</button>
+                        <button class="px-5 tab-btn w-full font-semibold py-4 bg-[#D8E0E9] "  data-id="war">War</button>
+                        <button class="px-5 tab-btn w-full font-semibold py-4 bg-[#D8E0E9]" data-id="computer">Computer</button>
+                    </div>
+                    <div class="contents p-4 ml-2">
+                        <div class=" content  active px-4  " id="history">
+                            <h1 class="text-3xl font-semibold mb-2">History</h1>
+                            <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum labore necessitatibus aut. Eaque animi sit ea debitis praesentium, iure repudiandae?</p>
+                        </div>
+
+                        <div class=" content px-4  " id="war">
+                            <h1 class="text-3xl font-semibold mb-2">War</h1>
+                            <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nobis, vel neque iusto quam aspernatur ipsa nostrum! Quo itaque enim perspiciatis, odio sit blanditiis quam quas maiores quasi omnis eum.
+                            </p>
+                        </div>
+
+
+                        <div class=" content px-4  " id="computer">
+                            <h1 class="text-3xl font-semibold mb-2">Computer</h1>
+                            <p class="font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt deleniti reiciendis iusto praesentium porro mollitia eligendi doloribus minima! Sequi ipsum cum molestias modi, non fugiat praesentium at fuga id quae itaque eius maxime veniam error, cupiditate deserunt, asperiores ab ut?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js">
+
+    </script>
+</body>
+</html>

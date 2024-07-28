@@ -1,0 +1,198 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+#container{
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+
+}
+body{
+    background:  linear-gradient(to bottom,rgba(103, 8, 8, 0.427) 45%,rgba(0, 128, 0, 0.435) 10%,rgba(0, 8, 255, 0.427))
+}
+#box{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.456);
+    width: 35vw;
+    height: 94vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.464);
+    display: flex;
+    flex-flow: column;
+    
+}
+#box h1{
+    text-align: center;
+    font-size: 2.4rem;
+}
+#box #inputFeild{
+    padding: 11px 4px;
+    align-self: center;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.1);
+    font: 800;
+    color: white;
+}
+
+#downSection{
+    width: 100%;
+}
+
+#lengthSection{
+    width: 100%;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+#lengthSection p{
+    font-size: 20px;
+    font-weight: bold;
+}
+#scrollerdiv{
+    display: flex;
+    justify-content: center;
+}
+#scroller{
+
+   width: 100%;
+   max-width: 80%;
+
+}
+#line{
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.389);
+}
+
+#ucase{
+    
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 20px;
+font-weight: 700;
+gap: 15px;
+
+}
+#ucase input{
+   
+    width: 15px;
+    height: 15px;
+}
+
+#lcase{
+    
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 20px;
+font-weight: 700;
+gap: 15px;
+
+}
+#lcase input{
+   
+    width: 15px;
+    height: 15px;
+}
+
+#numbers{
+    
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 20px;
+font-weight: 700;
+gap: 15px;
+
+}
+#numbers input{
+   
+    width: 15px;
+    height: 15px;
+}
+
+#chars{
+    
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 20px;
+font-weight: 700;
+gap: 15px;
+
+}
+#chars input{
+   
+    width: 15px;
+    height: 15px;
+}
+
+#symbols{
+    
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 20px;
+font-weight: 700;
+gap: 15px;
+
+}
+#symbols input{
+   
+    width: 15px;
+    height: 15px;
+}
+
+#btndiv{
+    max-width: 80%;
+    margin: 0 auto;
+    
+}
+#btndiv button{
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    box-shadow: -4px -4px black;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+#btndiv button:hover{
+    box-shadow: -1px -1px rgba(0, 0, 0, 0.613);
+}
+
+#strengthBox{
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+}

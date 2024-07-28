@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <style>
+
+    </style>
+    
+    <header class="w-full h-24 bg-[#414141]">
+        <nav class="flex px-8  py-6 md:px-32  md:py-6 justify-between items-center gap-8">
+            <div>
+                <h1 class="text-2xl text-white">HOME</h1>
+            </div>
+            <div class="w-full">
+                <ul class="hidden md:flex md:items-center justify-end gap-2 w-full  text-white text-2xl">
+                    <li>Sotre</li>
+                    <li>Review</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div>
+                <div class="text-2xl text-white md:hidden clickhere">
+                    <a  class="" id="box" href="#"><i class='bx bx-menu rotate'></i></a>   
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div id="drop-menu" class=" hidden w-[100vw] bg-[#d1d1d1]  h-[30vh] absolute top-30 z-1 md:hidden drop-menu "  >
+        <ul class=" flex flex-col items-start px-8 justify-around text-2xl h-full  ">
+           <a href="#"><li>Home</li></a>  
+           <a href="#"><li>Store</li></a>     
+           <a href="#"><li>Review</li></a>       
+        </ul>
+    </div>
+
+    <div class="w-full h-screen bg-[#414141] ">
+
+        <div class="w-ful h-[20vh] bg-[#d1d1d1] text-white text-4xl text-red-950 font-bold"><h1>HELLO W</h1></div>
+        <div class="w-ful h-[20vh] bg-[#212121] text-white text-4xl text-red-950 font-bold"><h1>HELLO W</h1></div>
+        <div class="w-ful h-[20vh] bg-[#616161] text-white text-4xl text-red-950 font-bold"><h1>HELLO W</h1></div>
+    </div>
+    
+    <script>
+        let isClicked = false;
+const chere = document.querySelector(".clickhere");
+const drop = document.querySelector("#drop-menu");
+
+chere.addEventListener('click', () => {
+    if (isClicked) {
+        chere.style.transform = "rotate(0deg)";
+        drop.classList.add("hidden");
+        
+    } else {
+        chere.style.transform = "rotate(90deg)";
+        drop.classList.add("block");
+        drop.classList.remove("hidden");
+    }
+    isClicked = !isClicked; // Toggle the boolean value
+});
+
+    </script>
+</body>
+</html>
