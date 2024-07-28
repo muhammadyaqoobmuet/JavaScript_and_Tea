@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#tracking-area {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+#coordinates p {
+    margin: 5px 0;
+}
+
+    </style>
+    <div id="myI"  >
+
+        <div id="tracking-area" >Move your mouse here</div>
+        <div >
+            <p id="client-coords">Client: (0, 0)</p>
+            <p id="page-coords">Page: (0, 0)</p>
+            <p id="screen-coords">Screen: (0, 0)</p>
+            <p id="offset-coords">Offset: (0, 0)</p>
+        </div>
+    </div>
+</body>
+<script>
+    /*
+    Click: Occurs when the mouse button is pressed and released.
+    Double-Click: Occurs when the mouse button is pressed and released twice in quick succession.
+    Mouse Down: Occurs when the mouse button is pressed.
+    Mouse Up: Occurs when the mouse button is released.
+    Mouse Move: Occurs when the mouse is moved.
+    Mouse Over: Occurs when the mouse pointer is moved over an element.
+    Mouse Out: Occurs when the mouse pointer is moved out of an element.
+    Mouse Enter: Occurs when the mouse pointer is moved onto an element.
+    Mouse Leave: Occurs when the mouse pointer is moved out of an element.
+    Context Menu: Occurs when the right mouse button is clicked, opening a context menu.
+    */
+
+//    document.querySelector('#myI').addEventListener('mouseout', (e)=>{
+//     document.querySelector('#myI').innerHTML=`${e.type} `;
+
+//    })
+   
+//    document.querySelector('#myI').addEventListener('mousedown', (e)=>{
+//     document.querySelector('#myI').innerHTML=`${e.type} `;
+
+//    })
+
+
+const trackingArea = document.getElementById('tracking-area');
+const clientCoords = document.getElementById('client-coords');
+const pageCoords = document.getElementById('page-coords');
+const screenCoords = document.getElementById('screen-coords');
+const offsetCoords = document.getElementById('offset-coords');
+
+trackingArea.addEventListener('mousemove', (e) => {
+    // Client coordinates
+    clientCoords.textContent = `Client: (${e.clientX}, ${e.clientY})`;
+
+    // Page coordinates
+    pageCoords.textContent = `Page: (${e.pageX}, ${e.pageY})`;
+
+    // Screen coordinates
+    screenCoords.textContent = `Screen: (${e.screenX}, ${e.screenY})`;
+
+    // Offset coordinates
+    offsetCoords.textContent = `Offset: (${e.offsetX}, ${e.offsetY})`;
+});
+
+/*
+Client Coordinates:
+
+Definition: Relative to the client area of the browser window.
+Origin: Top-left corner of the viewport (visible part of the web page).
+Properties:
+clientX: Horizontal coordinate within the application's client area.
+clientY: Vertical coordinate within the application's client area.
+Page Coordinates:
+
+Definition: Relative to the entire document.
+Origin: Top-left corner of the entire document (can be scrolled).
+Properties:
+pageX: Horizontal coordinate within the entire document.
+pageY: Vertical coordinate within the entire document.
+Screen Coordinates:
+
+Definition: Relative to the user's screen.
+Origin: Top-left corner of the screen.
+Properties:
+screenX: Horizontal coordinate relative to the screen.
+screenY: Vertical coordinate relative to the screen.
+Offset Coordinates:
+
+Definition: Relative to the target element.
+Origin: Top-left corner of the target element.
+Properties:
+offsetX: Horizontal coordinate within the target element.
+offsetY: Vertical coordinate within the target element.
+
+
+
+*/
+
+
+</script>
+</html>

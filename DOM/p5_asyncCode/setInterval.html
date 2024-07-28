@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        const hexValues = "0123456789ABCDEF";
+        let timeInveral;
+        function generateColor() {
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += hexValues.charAt(Math.floor(Math.random() * hexValues.length));
+            }
+            return color;
+        }
+
+        function changesColor(){
+           if(!timeInveral){
+            timeInveral=  setInterval(() => {
+                    document.body.style.backgroundColor = generateColor();
+                }, 100);
+           }
+        
+        }
+        function noTchangesColor(){
+            clearInterval(timeInveral);
+            timeInveral=null;
+        }
+
+        document.querySelector('#start').addEventListener('click', changesColor);
+        document.querySelector('#stop').addEventListener('click', noTchangesColor);
+
+       
+    </script>
+</body>
+</html>

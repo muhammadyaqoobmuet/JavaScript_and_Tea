@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#212121]">
+    <!--    container -->
+    <div
+      class="w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2px border rounded-md"
+    >
+      <h1 class="text-center text-4xl text-white font-bold py-2 my-2">COLOR CHANGER</h1>
+      <div class="flex justify-evenly">
+        <span class="inline-block relative">
+            <span class="block w-[90px] h-[90px] bg-red-950"></span>
+            <button id="bg-red-950" class="absolute top-0 left-0 w-full h-full cursor-pointer" onclick="activateSpan(this)"></button>
+        </span>
+        <span class="inline-block relative">
+            <span class="block w-[90px] h-[90px] bg-red-100"></span>
+            <button id="bg-red-100" class="absolute top-0 left-0 w-full h-full cursor-pointer" onclick="activateSpan(this)"></button>
+        </span>
+        <span class="inline-block relative">
+            <span class="block w-[90px] h-[90px] bg-red-300"></span>
+            <button id="bg-red-300" class="absolute top-0 left-0 w-full h-full cursor-pointer" onclick="activateSpan(this)"></button>
+        </span>
+        <span class="inline-block relative">
+            <span class="block w-[90px] h-[90px] bg-red-400"></span>
+            <button id="bg-red-400"  class="absolute top-0 left-0 w-full h-full cursor-pointer  " onclick="activateSpan(this)"></button>
+        </span>
+      </div>
+      <h3 class="text-center text-white py-4">Select the color to change background </h3>
+    </div>
+  
+    <script src="main.js"></script>
+</body>
+</html>

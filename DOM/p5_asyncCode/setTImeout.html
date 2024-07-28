@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         .loading {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+   <label for="mail">Enter mail</label>
+   <input type="text" placeholder="enter email" id="mail">
+   <button id="normal">Submit</button>
+   <button id="stop">Stop</button>
+   <div id="loading" class="loading" style="display: none;">Loading...</div>
+   <script>
+       const btn = document.querySelector('#normal');
+       const btn1 = document.querySelector('#stop');
+       const loadingDiv = document.getElementById('loading');
+       let email  = document.querySelector('#mail');
+       let timeout;
+       let loadingTimeout;
+
+       btn.addEventListener('click', () => {
+           // Show loading indicator
+           loadingDiv.style.display = 'block';
+
+           // Remove email value after 4 seconds
+           timeout = setTimeout(() => {
+               email.value = "";
+           }, 4000);
+
+           // Hide loading indicator after 4 seconds
+           loadingTimeout = setTimeout(() => {
+               loadingDiv.style.display = 'none';
+           }, 4000);
+       });
+
+       btn1.addEventListener('click', () => {
+           clearTimeout(timeout);
+           clearTimeout(loadingTimeout);
+
+           // Hide loading indicator immediately if the stop button is clicked
+           loadingDiv.style.display = 'none';
+
+           const newP = document.createElement('p');
+           newP.textContent = "Email won't be removed now";
+           document.body.appendChild(newP);
+       });
+   </script>
+
+</body>
+
+</html>

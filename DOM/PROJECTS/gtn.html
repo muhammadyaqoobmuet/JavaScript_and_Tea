@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('https://img.freepik.com/free-vector/dollar-sign-pattern-background_23-2150927123.jpg')] bg-cover  ">
+
+    <div class=" flex justify-center items-center  h-screen  bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border border-gray-100  ">
+        <form  class="border rounded-lg  max-w-1/2 px-2 py-4  ">
+
+       <h1 class="text-3xl text-[#E1D070] font-bold text-center my-2">Guess the Number Nigga</h1>
+        <p class="text-white leading-tight px-4 mt-8  ">try Guessing a number 10  times to win $100USDT <br>   follow the number from 1-100 for more <a class="text-slate-950" href="#">link</a></p>    
+            <div class="main flex flex-col justify-center items-center my-4 gap-2">
+                <h2 class="items-center text-xl text-[#E1D070] font-semibold ">GUESS THE NUMBER</h2>
+                <input type="text" name="" id="text-area" class="px-8 py-4 rounded-lg">
+                <button class="bg-[#688C30] text-white hover:bg-[#4A5F49] px-2 py-[6px] border-1 rounded-lg my-2" id="btn">Submit Guess</button>
+                <p id="win" class="hidden px-4 text-md font-semibold text-red-950 text-center"> Congrats Dude Your ip adress 192.168.100.1   <span id="disp"></span></p>   
+                <p id="lose" class="hidden px-4 text-md font-semibold text-red-950 text-center"> Better Luck try next time  <span id="disp"></span></p>   
+                <p class="self-start px-4 text-md font-semibold text-white">Perious Guess <span id="perv"></span></p>
+                <p class="self-start px-4 text-md font-semibold text-white">Remaining Guess <span id="noOfGuess">10</span></p>
+            </div>
+
+        </form>
+    </div>
+    <script src="gtn.js"></script>
+</body>
+</html>

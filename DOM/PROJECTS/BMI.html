@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#212121] h-screen flex flex-col items-center justify-center">
+   <style>
+    /* Define keyframes for entering and exiting */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Define classes for the animation */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards; /* Adjust the duration as needed */
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards; /* Adjust the duration as needed */
+    display: none; /* Ensure it's hidden after animation */
+}
+
+.block {
+    display: block;
+    animation: fadeIn 0.5s forwards; /* Adjust the duration as needed */
+}
+
+   </style>
+    <div
+      class="w-[50vw] parent mx-auto border h-[50vh] rounded-lg bg-gradient-to-r from-blue-300 to-purple-500"
+    >
+      <h1 class="text-white text-2xl font-bold text-center my-4">
+        BMI Calculator
+      </h1>
+      <hr class="w-ful h-[2px] bg-white mb-2" />
+
+      <div class=" heighDiv flex items-center gap-x-2 text-white px-4  ">
+        <label class="font-semibold mb-2" for="height">Height in cm</label>
+        <input
+          class="bg-transparent border rounded-lg shadow border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 py-2 px-4 block appearance-none leading-normal"
+          type="email"
+          id="height"
+          name="email"
+          required
+        />
+      </div>
+      <div class="flex items-center gap-x-2 px-4 text-white my-6 weightDiv">
+        <label class="font-semibold mb-2" for="weight">Weight in kg</label>
+        <input
+          class="bg-transparent border rounded-lg shadow border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 py-2 px-4 block appearance-none leading-normal"
+          type="email"
+          id="weight"
+          name="email"
+          required
+        />
+      </div>
+      <div class="calcbtn text-center w-ful">
+        <button
+          class="bg-gradient-to-r from-purple-400 to-indigo-500 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-5 px-52"
+          type="submit"
+        >
+          Calculate BMI
+        </button>
+      </div>
+
+
+    </div>
+    <!-- above page -->
+    <div
+    class="  secondparent hidden w-[50vw] mx-auto border h-[70vh] rounded-lg bg-gradient-to-r from-blue-300 to-purple-500"
+  >
+    <h1 class="text-white text-2xl font-bold text-center my-4">Results</h1>
+    <hr class="w-ful h-[2px] bg-white mb-2" />
+    <div class="px-4 text-gray-950 font-bold mb-4">
+      <h3>BMI Guide</h3>
+      <p>Under weight = less than 18.6</p>
+      <p>Normal Range = 18.6 to 24.9</p>
+      <p>OverWeight = greater than 24.9</p>
+    </div>
+    <div class="flex items-center gap-x-2 text-black px-4 mb-2">
+      <label class="font-semibold mb-2" for="yourbmi  ">Your BMI</label>
+      <input
+        class="bg-white rounded-lg shadow border-gray-950 w-ful focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 py-2 px-4 block appearance-none leading-normal"
+        type="text"
+        id="yourbmi"
+        name="email"
+        disabled
+        required
+      />
+    </div>
+    <div class="flex items-center gap-x-4 text-black px-4">
+      <label class="font-semibold mb-2 ml-[7px]" for="natejo ">Results</label>
+      <input
+        class="bg-white text-slate-950 rounded-lg shadow border-gray-950 w-ful focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 py-2 px-4 block appearance-none leading-normal"
+        type="text"
+        id="natejo"
+        name="email"
+        disabled
+        required
+      />
+    </div>
+    <div class="text-center w-ful mt-8 mr-16 recalc">
+      <button
+        class="bg-gradient-to-r from-purple-400 to-indigo-500 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-5 px-52"
+        type="submit"
+      >
+        Recalculate
+      </button>
+    </div>
+
+   
+
+
+    <script src="BMI.js"></script>
+  </body>
+</html>

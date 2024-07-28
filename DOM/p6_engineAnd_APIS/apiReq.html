@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Data</title>
+    <!-- Include Tailwind CSS specific version link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen" style="background-color: rgb(49, 48, 48); ">
+<style>
+    h1{
+        font-size: 2rem;
+    
+        font-weight: 600;
+    }
+    h2{
+        font-size: 1rem;
+        font-weight: 800;
+        background-color: white;
+        border-radius: 50px;
+        padding-left: 10px;
+        
+    }
+</style>
+    <div class="grid grid-cols-4  rounded-lg bg-gray-300 border-md w-[80vw] h-[70vh]  p-4 gap-4">
+        <div class=" px-4 py-2 border border-2 rounded-lg bg-slate-500  ">
+            <h1  id="firstCoin"></h1>
+            <h2 id="fprice"></h2>
+            <p id="firstSupply"></p>
+            <p id="firstMcap"></p>
+        </div>
+        <div class=" px-4 py-2 border border-2 rounded-lg bg-slate-500 ">
+            <h1 id="secCoin"></h1>
+            <h2 id="sprice"></h2>
+            <p id="secSupply"></p>
+            <p id="secMcap"></p>
+        </div>
+        <div class=" px-4 py-2 border border-2 rounded-lg bg-slate-500 ">
+            <h1 id="thirdCoin"></h1>
+            <h2 id="tprice"></h2>
+            <p id="thirdSupply"></p>
+            <p id="thirdMcap"></p>
+        </div>
+        <div class=" px-4 py-2 border border-2 rounded-lg bg-slate-500 ">
+            <h1 id="fourthCoin"></h1>
+            <h2 id="foprice"></h2>
+            <p id="fourthSupply"></p>
+            <p id="fourthMcap"></p>
+        </div>
+    </div>
+
+    <script>
+        const url = 'https://api.coincap.io/v2/assets';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText);
+                const assets = data.data; // Access the data array
+
+                // Update the HTML elements with the cryptocurrency data
+                document.getElementById('firstCoin').textContent = assets[0].name;
+                document.getElementById('firstSupply').textContent = `Supply: ${Math.round(assets[0].supply)}`;
+                document.getElementById('firstMcap').textContent =  `  Mcap: ${Math.round(assets[0].marketCapUsd)}$`;
+                document.getElementById('fprice').textContent =  `  Price: ${Math.round(assets[0].priceUsd)}$`;
+                
+                document.getElementById('secCoin').textContent = assets[1].name;
+                document.getElementById('secSupply').textContent = `Supply: ${Math.round(assets[1].supply)}`;
+                document.getElementById('secMcap').textContent =  `  Mcap: ${Math.round(assets[1].marketCapUsd)}$`;
+                document.getElementById('sprice').textContent =  `  Price: ${Math.round(assets[1].priceUsd)}$`;
+
+                document.getElementById('thirdCoin').textContent = assets[2].name;
+                document.getElementById('thirdSupply').textContent = `Supply: ${Math.round(assets[2].supply)}`;
+                document.getElementById('thirdMcap').textContent =  `  Mcap: ${Math.round(assets[2].marketCapUsd)}$`;
+                document.getElementById('tprice').textContent =  `  Price: ${Math.round(assets[2].priceUsd)}$`;
+
+                document.getElementById('fourthCoin').textContent = assets[3].name;
+                document.getElementById('fourthSupply').textContent = `Supply: ${Math.round(assets[3].supply)}`;
+                document.getElementById('fourthMcap').textContent =  `  Mcap: ${Math.round(assets[3].marketCapUsd)}$`;
+                document.getElementById('foprice').textContent =  `  Price: ${Math.round(assets[3].priceUsd)}$`;
+            }
+        };
+
+        xhr.send();
+    </script>
+</body>
+</html>
